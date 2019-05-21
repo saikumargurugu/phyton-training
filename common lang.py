@@ -1,8 +1,5 @@
 nam=[]
 lan=[]
-f={}
-c=0
-g=""
 for i in range(0,10):
     n=input("enter the name[end to stop]")
     if n == "end":
@@ -15,15 +12,10 @@ for i in range(0,10):
                 break
             else:
                 lan.append(m)
-lan2=" ".join(lan)
-print(lan2)
-print(type(lan2))
-y=lan2.split()
-y.sort()
-print(enumerate(y))
+lan.sort()
 c =""
-for k in y:
+for k in lan:
     if k != c:
-        count = [i for i, w in enumerate(y) if w == k]
+        count = [i for i, w in enumerate(lan) if w == k ]
         print(k + " frequency is " + str(len(count)))
     c = k
